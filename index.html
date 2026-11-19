@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Big Burger — Eng mazali burgerlar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">🍔 Big <span>Burger</span></a>
+      <nav class="nav-links">
+        <a href="#menu">Menyu</a>
+        <a href="#about">Biz haqimizda</a>
+        <a href="#contact">Aloqa</a>
+      </nav>
+      <button class="cart-btn" id="openCartBtn">
+        Savatcha <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <span class="badge">🔥 Har kuni yangi va issiq</span>
+        <h1>Haqiqiy katta ta’m — <span>Big Burger</span> da!</h1>
+        <p>
+          Sersuv mol go‘shti, eritilgan pishloq, yangi sabzavotlar va maxsus souslar bilan tayyorlangan
+          eng mazali burgerlar. Tezkor yetkazib berish xizmati mavjud.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary">Menyuni ko‘rish</a>
+          <a href="#contact" class="btn-secondary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-emoji">🍔</div>
+        <h3>Double Big Burger</h3>
+        <p>Ikki qavatli mol go‘shti kotleti, cheddar pishloq, karamellashgan piyoz va firma sousi.</p>
+        <div class="price-tag">44 000 so‘m</div>
+      </div>
+    </section>
+
+    <section id="menu" class="container">
+      <div class="section-head">
+        <div>
+          <h2>Bizning menyu</h2>
+          <p>O‘zingizga yoqqan burger va qo‘shimchalarni tanlang</p>
+        </div>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-cat="all">Barchasi</button>
+        <button class="filter-btn" data-cat="burger">Burgerlar</button>
+        <button class="filter-btn" data-cat="snack">Gazaklar</button>
+        <button class="filter-btn" data-cat="drink">Ichimliklar</button>
+      </div>
+
+      <div class="grid" id="menuGrid"></div>
+    </section>
+
+    <section id="about" class="container">
+      <div class="info-box">
+        <div class="info-item">
+          <h4>🥩 Sifatli masalliqlar</h4>
+          <p>Har kuni yangi pishirilgan bulochkalar va tanlab olingan go‘sht mahsulotlari.</p>
+        </div>
+        <div class="info-item">
+          <h4>⚡ Tezkor tayyorlov</h4>
+          <p>Buyurtmangiz issiq holatda va qisqa fursatda qo‘lingizga yetkaziladi.</p>
+        </div>
+        <div class="info-item">
+          <h4>🕒 Ish vaqti</h4>
+          <p>Har kuni 09:00 dan 23:59 gacha xizmat ko‘rsatamiz.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <div class="info-box">
+        <div class="info-item">
+          <h4>📍 Manzil</h4>
+          <p>Andijon shahri, Markaziy ko‘cha, 12-uy</p>
+        </div>
+        <div class="info-item">
+          <h4>📞 Telefon</h4>
+          <p>+998 (90) 123-45-67</p>
+        </div>
+        <div class="info-item">
+          <h4>💬 Buyurtma</h4>
+          <p>Savatcha orqali tezda ro‘yxatdan o‘tkazing yoki qo‘ng‘iroq qiling.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> <strong>Big Burger</strong>. Barcha huquqlar himoyalangan.
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-backdrop" id="cartDrawer">
+    <div class="drawer">
+      <div>
+        <div class="drawer-head">
+          <h3>Savatcha</h3>
+          <button class="close-btn" id="closeCartBtn">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+      </div>
+      <div class="drawer-foot">
+        <div class="total-row">
+          <span>Jami:</span>
+          <span id="cartTotal">0 so‘m</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">Buyurtma berish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
